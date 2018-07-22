@@ -24,6 +24,7 @@ val counts = textFile.flatMap(line => line.split(" "))
 // ._SUCESS
 //.part-nnnn
 .counts.saveAsTextFile("hdfs://...")
+</pre>
 
 ### Respostas para a segunda parte do teste aplicado
 O código fonte para atender esta requisição encontra-se neste repositório, foi criado utilizando o Spark 2.3 e Scala 2.11.
@@ -33,3 +34,18 @@ ParseLog.scala; responsável por realizar o tratamento dos dados existentes nos 
 
 NasaChallenge.scala; responsável por extrair as informações dos arquivos de log e apresentá-las.
 
+##### Os resultados obtidos no processamento são mostrados abaixo:
+
+Quantidade de hosts únicos: 137978
+
+Total de erros 404: 20901
+
+Top 5 urls com erros 404: 
+(/pub/winvn/readme.txt,2004)  
+(/pub/winvn/release.txt,1732)  
+(/shuttle/missions/STS-69/mission-STS-69.html,683)  
+(/shuttle/missions/sts-68/ksc-upclose.gif,428)  
+(/history/apollo/a-001/a-001-patch-small.gif,384)  
+
+Média de erros 404 por dia: 360.36  
+Total de bytes returnados: 65524314915
